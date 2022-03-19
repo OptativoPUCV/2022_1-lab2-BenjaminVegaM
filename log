@@ -3,3 +3,38 @@ Sat, 19 Mar 2022 16:50:43:
  1 file changed, 22 insertions(+), 5 deletions(-)
  tests:  0|0
 9ab1536
+Sat, 19 Mar 2022 16:51:48: 
+ list.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+list.c: In function 'firstList':
+list.c:41:5: error: 'return' with no value, in function returning non-void [-Werror=return-type]
+   41 |     return;
+      |     ^~~~~~
+list.c:39:8: note: declared here
+   39 | void * firstList(List * list) {
+      |        ^~~~~~~~~
+list.c: In function 'nextList':
+list.c:46:5: error: 'return' with no value, in function returning non-void [-Werror=return-type]
+   46 |     return;
+      |     ^~~~~~
+list.c:44:8: note: declared here
+   44 | void * nextList(List * list) {
+      |        ^~~~~~~~
+list.c: In function 'lastList':
+list.c:51:5: error: 'return' with no value, in function returning non-void [-Werror=return-type]
+   51 |     return;
+      |     ^~~~~~
+list.c:49:8: note: declared here
+   49 | void * lastList(List * list) {
+      |        ^~~~~~~~
+list.c: In function 'prevList':
+list.c:56:5: error: 'return' with no value, in function returning non-void [-Werror=return-type]
+   56 |     return;
+      |     ^~~~~~
+list.c:54:8: note: declared here
+   54 | void * prevList(List * list) {
+      |        ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+d78ccbe

@@ -38,22 +38,22 @@ List * createList() {
 
 void * firstList(List * list) {
     list->current = list->head;
-    return list;
+    return;
 }
 
 void * nextList(List * list) {
     list->current = list->current->next;
-    return list;
+    return;
 }
 
 void * lastList(List * list) {
     list->current = list->tail;
-    return list;
+    return;
 }
 
 void * prevList(List * list) {
     list->current = list->current->prev;
-    return list;
+    return;
 }
 
 void pushFront(List * list, void * data) {
