@@ -127,7 +127,35 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-    return NULL;
+
+    if(list->current == NULL) return NULL;
+    
+    void datoAux = list->current->data;
+
+    if(list->current->prev == NULL)
+    {
+        list->head = list->current->next;
+        list->current->next->prev = NULL;
+        //free(list->current->next);
+        list->current = list->head;
+    }
+    else if(list->current->next == NULL)
+    {
+        list->tail = list->current->prev;
+        list->current->prev->next = NULL;
+        //free(list->current->prev);
+        list->current = list->tail;
+    }
+    else
+    {
+        list->current->next->prev = list->current->prev;
+        list->current->prev->next = list->current->next;
+    }
+
+    //free(list->current->data);
+    //free(list->current);
+
+    return datoAux;
 }
 
 void cleanList(List * list) {

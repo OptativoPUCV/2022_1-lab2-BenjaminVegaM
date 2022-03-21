@@ -160,3 +160,20 @@ Sun, 20 Mar 2022 21:40:03:
  tests:  11|1
 total_score: 55/70
 ac4301f
+Sun, 20 Mar 2022 22:24:25: 
+ list.c | 30 +++++++++++++++++++++++++++++-
+ 1 file changed, 29 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function 'popCurrent':
+list.c:133:10: error: variable or field 'datoAux' declared void
+  133 |     void datoAux = list->current->data;
+      |          ^~~~~~~
+list.c:133:20: error: initialization of 'int' from 'void *' makes integer from pointer without a cast [-Werror=int-conversion]
+  133 |     void datoAux = list->current->data;
+      |                    ^~~~
+list.c:158:12: error: returning 'int' from a function with return type 'void *' makes pointer from integer without a cast [-Werror=int-conversion]
+  158 |     return datoAux;
+      |            ^~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+ae71ea8
