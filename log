@@ -191,3 +191,9 @@ list.c:158:12: error: returning 'int' from a function with return type 'void *' 
 cc1.exe: all warnings being treated as errors
 Compilation failed
 f728846
+Sun, 20 Mar 2022 22:26:21: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  12|0
+total_score: 70/70
+3747b95

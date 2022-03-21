@@ -130,7 +130,7 @@ void * popCurrent(List * list) {
 
     if(list->current == NULL) return NULL;
     
-    int datoAux = list->current->data;
+    int * datoAux = list->current->data;
 
     if(list->current->prev == NULL)
     {
