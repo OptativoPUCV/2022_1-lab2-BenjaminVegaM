@@ -177,3 +177,17 @@ list.c:158:12: error: returning 'int' from a function with return type 'void *' 
 cc1.exe: all warnings being treated as errors
 Compilation failed
 ae71ea8
+Sun, 20 Mar 2022 22:24:44: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function 'popCurrent':
+list.c:133:19: error: initialization of 'int' from 'void *' makes integer from pointer without a cast [-Werror=int-conversion]
+  133 |     int datoAux = list->current->data;
+      |                   ^~~~
+list.c:158:12: error: returning 'int' from a function with return type 'void *' makes pointer from integer without a cast [-Werror=int-conversion]
+  158 |     return datoAux;
+      |            ^~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+f728846
